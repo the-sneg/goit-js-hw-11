@@ -8,7 +8,6 @@ import './css/style.css';
 
 const refs = {
   form: document.querySelector('#search-form'),
-  input: document.querySelector('.header__input'),
   gallery: document.querySelector('.gallery'),
   endSearchInfo: document.querySelector('.end-search__info'),
 };
@@ -16,10 +15,8 @@ const { form, gallery, endSearchInfo } = refs;
 
 const imageApiService = new ImageApiService();
 
-// Add submit listener
 form.addEventListener('submit', onSearch);
 
-// Add global variables
 let shownImages = 0;
 let lightbox = {};
 
