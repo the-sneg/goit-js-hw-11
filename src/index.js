@@ -42,6 +42,7 @@ async function onSearch(event) {
 
   try {
     const data = await imageApiService.fetchQuery();
+    // const checkPage = Math.ceil(total / per_page);
 
     if (data.totalHits === 0) {
       return Notify.failure(
@@ -50,6 +51,11 @@ async function onSearch(event) {
           position: 'left-top',
         }
       );
+    }
+    if (refs.form.elements.searchQuery.value === '') {
+      return Notify.warning('Search field empty!', {
+        position: 'left-top',
+      });
     }
 
     shownImages = data.hits.length;

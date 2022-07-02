@@ -46,8 +46,13 @@ img {
     font-size: 16px;
 }
 
+.end-search__info {
+    display: none;
+}
 
-
+.show {
+    display: block;
+}
 /*------------------MAIN----------------*/
 
 
